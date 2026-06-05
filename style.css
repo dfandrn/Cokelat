@@ -1,40 +1,300 @@
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Poppins,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-  background:#fffaf5;
+background:#fffaf5;
+color:#333;
 }
 
 header{
-  background:#fff;
-  padding:15px;
+position:fixed;
+top:0;
+width:100%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,.1);
+z-index:1000;
 }
 
-nav{
-  display:flex;
-  justify-content:space-between;
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#6b3e26;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#8B4513;
+}
+
+.btn{
+background:#8B4513;
+color:white;
+padding:12px 24px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+background:#6b3e26;
 }
 
 .hero{
-  height:80vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:120px 8%;
 }
 
-.hero h1{
-  color:#6b3e26;
-  font-size:3rem;
+.hero-text{
+max-width:550px;
 }
 
-button{
-  margin-top:15px;
+.hero-text h1{
+font-size:55px;
+color:#6b3e26;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:18px;
+margin-bottom:30px;
+line-height:1.8;
+}
+
+.hero img{
+width:450px;
+animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-15px);
+}
+}
+
+.section-title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#6b3e26;
+}
+
+.features{
+padding:100px 8%;
+}
+
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.feature-card{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.feature-card:hover{
+transform:translateY(-10px);
+}
+
+.products{
+padding:100px 8%;
+background:#fff;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.product{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.product:hover{
+transform:translateY(-10px);
+}
+
+.product img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.product-content{
+padding:20px;
+}
+
+.price{
+font-size:20px;
+font-weight:bold;
+color:#8B4513;
+margin:10px 0;
+}
+
+.about{
+padding:100px 10%;
+text-align:center;
+}
+
+.about p{
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+.stats{
+background:#6b3e26;
+padding:80px 8%;
+color:white;
+}
+
+.stat-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:30px;
+text-align:center;
+}
+
+.number{
+font-size:45px;
+font-weight:bold;
+}
+
+.testimonials{
+padding:100px 8%;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.testimonial{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.faq{
+padding:100px 8%;
+}
+
+.accordion{
+margin-bottom:15px;
+}
+
+.accordion button{
+width:100%;
+padding:15px;
+background:#8B4513;
+color:white;
+border:none;
+cursor:pointer;
+text-align:left;
+font-size:16px;
+border-radius:10px;
+}
+
+.content{
+display:none;
+padding:15px;
+background:#fff;
+border-radius:0 0 10px 10px;
+}
+
+.contact{
+padding:100px 8%;
+background:#fff;
+text-align:center;
+}
+
+footer{
+background:#3e2315;
+color:white;
+padding:50px 8%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+footer a{
+color:#ddd;
+text-decoration:none;
+display:block;
+margin-top:8px;
+}
+
+.copy{
+text-align:center;
+margin-top:30px;
+border-top:1px solid rgba(255,255,255,.2);
+padding-top:20px;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+width:300px;
+margin-top:30px;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+.nav-links{
+display:none;
+}
+  }  margin-top:15px;
   padding:12px 25px;
   border:none;
   background:#8B4513;
