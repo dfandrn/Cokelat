@@ -1,16 +1,19 @@
-const counter = document.querySelector(".counter");
+const fadeElements = document.querySelectorAll('.fade-up');
 
-let start = 0;
-let target = Number(counter.dataset.target);
+function reveal(){
 
-function updateCounter(){
-  if(start < target){
-    start += 100;
-    counter.textContent = start;
-    setTimeout(updateCounter, 20);
-  }else{
-    counter.textContent = target + "+";
-  }
+fadeElements.forEach(el=>{
+
+const top = el.getBoundingClientRect().top;
+
+if(top < window.innerHeight-100){
+el.classList.add('show');
 }
 
-updateCounter();
+});
+
+}
+
+window.addEventListener('scroll',reveal);
+
+reveal();
