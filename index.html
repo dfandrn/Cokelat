@@ -1,101 +1,201 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChocoLuv</title>
-<link rel="stylesheet" href="style.css">
-  
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coklat premium dengan rasa terbaik untuk menemani setiap momen spesial">
+    <meta name="keywords" content="coklat, chocolate, coklat enak, toko coklat, kue coklat">
+    <title>Coklat Enak - Premium Chocolate Store</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700;9..144,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    
 </head>
 <body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🍫</span>
+                <span>Coklat Enak</span>
+            </a>
+            
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Beranda</a>
+                <a href="#products" class="nav-link">Produk</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+                <a href="https://wa.link/8aa2m5" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Order Now
+                </a>
+            </nav>
+        </div>
+    </header>
 
-<header>
-<nav class="navbar">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1 class="hero-title">Manisnya Coklat, Semanis Hari-harimu</h1>
+            <p class="hero-subtitle">Coklat premium dengan rasa terbaik untuk menemani setiap momen spesial. Dijamin bikin nagih dengan cita rasa yang tak terlupakan!</p>
+            
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">
+                    <i class="fas fa-shopping-bag"></i> Lihat Produk
+                </a>
+                <a href="https://wa.link/8aa2m5" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
 
-<div class="logo">🍫 ChocoLuv</div>
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="products-header">
+                <h2 class="section-title">Produk Unggulan Kami</h2>
+                <p class="products-subtitle">Temukan coklat premium favoritmu dengan harga terbaik. Buruan order sebelum kehabisan!</p>
+            </div>
+            
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="coklat">Coklat</button>
+                <button class="filter-btn" data-filter="kue">Kue</button>
+                <button class="filter-btn" data-filter="donat">Donat</button>
+            </div>
+            
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
 
-<div class="nav-links">
-<a href="#home">Beranda</a>
-<a href="#produk">Produk</a>
-<a href="#about">Tentang</a>
-<a href="#kontak">Kontak</a>
-</div>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Kami</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>Coklat Enak</strong> menghadirkan coklat premium dengan kualitas terbaik untuk menemani setiap momen spesial Anda. Dengan cita rasa yang khas, lembut, dan tak terlupakan, produk kami cocok untuk semua kalangan, terutama generasi muda yang menyukai kelezatan coklat berkualitas.</p>
+                    
+                    <p>Kami memulai perjalanan ini dengan tujuan memberikan pengalaman terbaik dalam menikmati coklat. Setiap produk dibuat dengan bahan pilihan dan proses yang teliti untuk memastikan rasa yang sempurna dan konsisten.</p>
+                    
+                    <p>Dijamin bikin nagih dan candu dengan rasa coklat premium yang tak tertandingi!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-</nav>
-</header>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telepon</h4>
+                            <p>+62 812-8996-1046 (Owner)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>hello@coklatenak.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Lokasi</h4>
+                            <p>Tangerang Selatan, Banten, Indonesia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://whatsapp.com/channel/0029Vb7mHpZ60eBimfMgiy2I" class="social-link" target="_blank" title="WhatsApp Channel">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cokela_enak?igsh=MW81bzI3d3NrdWM0OQ" class="social-link" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@cokelat.enak5?_r=1&_t=ZS-98EXp7Ev6AL" class="social-link" target="_blank" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="admin-list">
+                    <h4>Tim Admin Coklat Enak</h4>
+                    <p>Fast response! Silakan hubungi admin kami untuk pemesanan:</p>
+                    
+                    <div class="admin-grid">
+                        <div class="admin-item">Admin 1: +62 812-9545-3657</div>
+                        <div class="admin-item">Admin 2: +62 895-4032-75108</div>
+                        <div class="admin-item">Admin 3: +62 831-8916-2707</div>
+                        <div class="admin-item">Admin 4: +62 895-2679-7014</div>
+                        <div class="admin-item">Admin 5: +62 858-1060-2694</div>
+                        <div class="admin-item">Admin 6: +62 851-7109-4599</div>
+                    </div>
+                    
+                    <a href="https://wa.link/8aa2m5" class="btn btn-whatsapp" style="margin-top: 20px;" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="hero fade-up" id="home">
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">🍫 Coklat Enak</div>
+            
+            <div class="footer-links">
+                <a href="#home" class="footer-link">Beranda</a>
+                <a href="#products" class="footer-link">Produk</a>
+                <a href="#about" class="footer-link">Tentang</a>
+                <a href="#contact" class="footer-link">Kontak</a>
+                <a href="https://whatsapp.com/channel/0029Vb7mHpZ60eBimfMgiy2I" class="footer-link" target="_blank">WhatsApp Channel</a>
+            </div>
+            
+            <p class="copyright">
+                &copy; 2026 Coklat Enak. All rights reserved.<br>
+                Support by: Tim Coklat Enak | Owner: CMIWW<br>
+                Version: Beta v2.0
+            </p>
+        </div>
+    </footer>
 
-<div class="hero-text">
-<h1>Manisnya Coklat, Manisnya Hari Kamu 🍫</h1>
-
-<p>
-Coklat premium dengan rasa terbaik untuk menemani setiap momen spesial.
-</p>
-
-<br>
-
-<a href="#produk" class="btn">Lihat Produk</a>
-
-</div>
-
-
-</section>
-
-<section class="products fade-up" id="produk">
-
-<h2 class="section-title">Produk Favorit</h2>
-
-<div class="product-grid">
-
-<div class="product">
-<h3>Milk Chocolate</h3>
-<p>Rp25.000</p>
-</div>
-
-<div class="product">
-<h3>Dark Chocolate</h3>
-<p>Rp30.000</p>
-</div>
-
-<div class="product">
-<h3>Almond Chocolate</h3>
-<p>Rp35.000</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="about fade-up" id="about">
-
-<h2 class="section-title">Tentang Kami</h2>
-
-<p>
-ChocoLuv menghadirkan coklat premium berkualitas tinggi dengan rasa yang lembut dan tak terlupakan.
-</p>
-
-</section>
-
-<footer class="fade-up" id="kontak">
-
-<h3>🍫 ChocoLuv</h3>
-
-<p>📞 0812-3456-7890</p>
-
-<p>✉️ hello@chocoluv.com</p>
-
-<p>📍 Tangerang, Indonesia</p>
-
-<br>
-
-<p>© 2026 ChocoLuv. All Rights Reserved.</p>
-
-</footer>
-
-  <script src="script.js"></script>
-
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+    
+   <script src="script.js"></script>
+     
 </body>
 </html>
-  
