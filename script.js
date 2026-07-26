@@ -58,15 +58,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 {
                     id: 2,
                     name: "Coklat PCS",
-                    price: "Rp16.330",
+                    price: "Rp12.500",
                     status: "down",
                     category: "coklat",
                     description: "Coklat per piece dengan berbagai varian rasa."
                 },
                 {
                     id: 3,
-                    name: "Donat Ceres",
-                    price: "Rp14.700",
+                    name: "Donat",
+                    price: "Rp3.500",
                     status: "up",
                     category: "donat",
                     description: "Donat dengan topping ceres yang lezat dan manis."
